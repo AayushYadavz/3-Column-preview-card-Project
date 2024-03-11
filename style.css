@@ -1,0 +1,144 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+  body{
+    background-color: hsl(0, 0%, 95%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .container{
+    display: grid;
+    max-width: 800px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .card-one{
+    background-color: hsl(31, 77%, 52%);
+    padding: 40px;
+  }
+
+  .card-two{
+    background-color: hsl(184, 100%, 22%);
+    padding: 40px;
+  }
+
+  .card-three{
+    background-color: hsl(179, 100%, 13%);
+    padding: 40px;
+  }
+
+  h2{
+    color: hsl(0, 0%, 95%);
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 25px 0px;
+  }
+
+  p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Lexend Deca", sans-serif;
+  }
+
+  .para{
+    margin-bottom: 60px;
+  }
+
+  .readmore{
+    background-color: hsl(0, 0%, 95%);
+    max-width: 130px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+  }
+  
+  .p-one{
+    color: hsl(31, 77%, 52%);
+  }
+
+  .p-two{
+    color: hsl(184, 100%, 22%);
+  }
+
+  .p-three{
+    color: hsl(179, 100%, 13%);
+  }
+  
+  .readmore p{
+    font-weight: bold;
+  }
+
+  .readmore:hover{
+    background: none;
+    border: 2px solid hsl(0, 0%, 95%);
+    cursor: pointer;
+  }
+
+  .readmore:hover p{
+    color: hsl(0, 0%, 95%);
+  }
+
+  @media screen and (max-width: 767px){
+    body{
+        padding: 100px 20px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+  }
