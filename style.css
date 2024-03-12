@@ -9,15 +9,10 @@
     align-items: center;
     font-size: 15px;
     font-family: "Lexend Deca", sans-serif;
-    font-weight: 400;
-  }
-
-  .container{
-    margin: 0 auto; /* To make this container center */
-    max-width: 960px;
   }
 
   .card{
+    max-width: 960px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 12px;
@@ -45,7 +40,7 @@
     color: hsl(0, 0%, 95%);
     font-family: "Big Shoulders Display", sans-serif;
     text-transform: uppercase;
-    font-size: 30px; /* To make it bigger */
+    font-size: 2.1rem; /* To make it bigger */
   }
 
   .box p{
