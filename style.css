@@ -11,7 +11,7 @@
     font-family: "Lexend Deca", sans-serif;
   }
 
-  .card{
+  .container{
     max-width: 960px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -77,13 +77,13 @@
   }
 
   @media screen and (max-width: 768px){
-    .card{
+    .container{
       grid-template-columns: 1fr;
     }
   }
 
   @media screen and (max-width: 425px){
-    .card{
+    .container{
       margin: 2rem .5rem; /* To reduce margin from righ/left in smaller display under 425px */
     }
   }
