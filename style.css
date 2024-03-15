@@ -1,89 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
 
-  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 95%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
 
-  body{
-    background-color: hsl(0, 0%, 95%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    font-family: "Lexend Deca", sans-serif;
+.card {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 12px;
+  margin: 2rem; /* To give some gap from left n right */
+  overflow: hidden;
+}
+
+.card-one {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.card-two {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.card-three {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.box {
+  padding: 40px;
+  display: grid;
+  grid-template-rows: 10% 25% 1fr;
+  place-items: start;
+}
+
+.box h1 {
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.1rem; /* To make it bigger */
+}
+
+.box p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6; /* To create some gap between line */
+}
+
+.box a {
+  text-decoration: none;
+  background-color: hsl(0, 0%, 95%);
+  padding: 13px 27px;
+  border-radius: 26px;
+  /* margin-top: 60px; */
+  align-self: flex-end;
+  display: inline-block; /* beacuse by default anchor tag is an inline element so we can not apply margin on that */
+  border: 2px solid hsl(0, 0%, 95%);
+  transition: all 0.4s ease-in-out;
+}
+
+.card-one a {
+  color: hsl(31, 77%, 52%);
+}
+
+.card-two a {
+  color: hsl(184, 100%, 22%);
+}
+
+.card-three a {
+  color: hsl(179, 100%, 13%);
+}
+
+.box a:hover {
+  color: hsl(0, 0%, 95%);
+  background: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
   }
-
-  .card{
-    max-width: 960px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-radius: 12px;
-    margin: 2rem; /* To give some gap from left n right */
-    overflow: hidden;
-  }
-
-  .card-one{
-    background-color: hsl(31, 77%, 52%);
-  }
-
-  .card-two{
-    background-color: hsl(184, 100%, 22%);
-  }
-
-  .card-three{
-    background-color: hsl(179, 100%, 13%);
-  }
-
   .box {
-    padding: 40px; 
+    grid-template-rows: 10% 35% 1fr;
   }
+}
 
-  .box h2{
-    color: hsl(0, 0%, 95%);
-    font-family: "Big Shoulders Display", sans-serif;
-    text-transform: uppercase;
-    font-size: 2.1rem; /* To make it bigger */
+@media screen and (max-width: 425px) {
+  .card {
+    margin: 2rem 0.5rem; /* To reduce margin from righ/left in smaller display under 425px */
   }
-
-  .box p{
-    color: hsla(0, 0%, 100%, 0.75);
-    line-height: 1.6; /* To create some gap between line */
-  }
-
-  .box a{
-    text-decoration: none;
-    background-color: hsl(0, 0%, 95%);
-    padding: 13px 27px;
-    border-radius: 26px;
-    margin-top: 60px;
-    display: inline-block; /* beacuse by default anchor tag is an inline element so we can not apply margin on that */
-    border: 2px solid hsl(0, 0%, 95%);
-    transition: all .4s ease-in-out;
-  }
-
-  .card-one a{
-    color: hsl(31, 77%, 52%);
-  }
-
-  .card-two a{
-    color: hsl(184, 100%, 22%);
-  }
-
-  .card-three a{
-    color: hsl(179, 100%, 13%);
-  }
-
-  .box a:hover{
-    color: hsl(0, 0%, 95%);
-    background: transparent;
-  }
-
-  @media screen and (max-width: 768px){
-    .card{
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media screen and (max-width: 425px){
-    .card{
-      margin: 2rem .5rem; /* To reduce margin from righ/left in smaller display under 425px */
-    }
-  }
+}
